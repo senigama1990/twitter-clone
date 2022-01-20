@@ -1,11 +1,11 @@
 import React from 'react'
 import "./AppHeader.css"
 
-function AppHeader() {
+function AppHeader({ liked, allPosts}) {
   return (
     <div className='app-header d-flex'>
       <h1>Suxrob Avezov</h1>
-      <h2>5 posts, likes 0</h2>
+      <h2>{allPosts} posts, likes { liked}</h2>
     </div>
   )
 }

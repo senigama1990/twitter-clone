@@ -2,7 +2,7 @@ import React from 'react'
 import PostListItem from '../PostListItem/PostListItem'
 import "./PostList.css"
 
-function PostList({posts, onDelete}) {
+function PostList({ posts, onDelete, onToggleImportant, onToggleLiked}) {
 
   const elements = posts.map(item => {
     return (
@@ -11,6 +11,10 @@ function PostList({posts, onDelete}) {
           label={item.label}
           important={item.important}
           onDelete={() => onDelete(item.id)}
+          onToggleImportant={() => onToggleImportant(item.id)}
+          onToggleLiked={() => onToggleLiked(item.id)}
+          like={item.like}
+          important = {item.important}
         />
       </li>
     )
